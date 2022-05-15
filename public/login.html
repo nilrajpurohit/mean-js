@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center align-items-center authDivHeight">
+<div  class="container p-5 w-50">
+    <form ng-submit="login()">
+        <div class="my-3">
+            <h3>Login</h3>
+        </div>
+        <p class="text-danger">{{errorMsg}}</p>
+        <div class="mb-3">
+            <input type="text" required class="form-control" id="name" placeholder="Username" ng-model="user.username">
+        </div>
+        <div class="mb-3">
+            <input type="password" required class="form-control" id="name" placeholder="Password" ng-model="user.password">
+        </div>
+        
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Login</button>
+        </div>
+    </form>
+</div>
+</div>
