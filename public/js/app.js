@@ -14,6 +14,21 @@ var app = angular.module('App',['ngRoute','ngResource']).run(function($rootScope
     }
 });
 
+//custom directive
+app.directive('showPosts',[function(){
+    return {
+        ristrict:"E",
+        scope:{
+            posts:'=',
+        },
+        templateUrl:"show-posts.html",
+        controller:function($scope){
+            $scope.title = "All Posts : ";
+        }
+
+    }
+}])
+
 //Factory for multiple use case
 app.factory('postService',function($http,$resource){
     // var factory ={};

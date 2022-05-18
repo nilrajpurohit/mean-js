@@ -12,11 +12,5 @@
         </div>
     </form>
 
-    <div class="my-3">
-        <div class="p-3 rounded" ng-repeat="post in posts | orderBy:'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'">
-            <span class="fw-bold">{{post.username}}</span>
-            <span class="fs-6 fw-light ml-5">{{post.created_at | date:"h:mma 'on' MMM d,y"}}</span>
-            <p class="p-0 m-0">{{post.text}}</p>
-        </div>
-    </div>
+    <show-posts posts="posts"></show-posts>
 </div>
